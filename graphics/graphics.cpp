@@ -2,7 +2,7 @@
 
 // STATIC MEMBERS
 
-const int Graphics::WIDTH = 32 * GRID_SIZE;
+const int Graphics::WIDTH = SQUARE_SIZE * GRID_SIZE;
 const int Graphics::HEIGHT = WIDTH;
 
 // PRIVATE HELPER FUNCTIONS
@@ -45,7 +45,7 @@ bool Graphics::init_sdl() {
 // Type: 0 = snake, 1 = apple
 void Graphics::render_square(int x, int y, int type) {
 
-    SDL_Rect rect = {x * GRID_SIZE, y * GRID_SIZE, GRID_SIZE, GRID_SIZE};
+    SDL_Rect rect = {x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE};
 
     if (type == 0) {
         SDL_SetRenderDrawColor(renderer, 0, 200, 0, 255);    
